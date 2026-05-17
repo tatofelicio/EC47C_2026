@@ -1,0 +1,86 @@
+/* Fonte externa */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Playfair+Display:ital@1&display=swap');
+
+body {
+    background-color: #e5de16;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+#topo {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 20px;
+}
+
+img {
+    border-radius: 10px;
+    border: 10px solid white;
+    height: 200px;
+    width: auto;
+    
+}
+
+a:hover {
+    color: #e5de16;
+}
+
+a {
+    color: #48ff00;
+    text-decoration: none;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+h1 {
+     text-align: center;
+      background-color: #e5de16;
+      text-shadow: 10px 5px 5px rgb(0, 0, 0);
+      border-radius: 8px;
+      padding: 10px;
+}
+
+.secao {
+    margin: 20px;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1f1f1f;
+    margin-top: 20px;
+}
+
+figure {
+    text-align: center;
+    color: #0aba59;
+}
+
+section {
+    margin: 70px;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+}
+
+img[data-tipo="perfil"] {
+    border: 5px solid yellow;
+}
+
+.link-contato {
+    font-weight: bold;
+}
+
+figcaption p {
+    text-shadow: 10px 5px 5px #c706e5;
+}

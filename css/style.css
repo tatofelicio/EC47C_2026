@@ -285,6 +285,12 @@ footer {
 
 footer section {
     flex: 1;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-left: 4px solid var(--accent-color);
+    padding: 25px;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 footer h3 {
@@ -317,4 +323,11 @@ footer a {
 footer a:hover {
     color: var(--accent-color);
     text-decoration: underline;
+}
+
+footer section p {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: var(--box-bg);
 }
