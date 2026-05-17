@@ -249,3 +249,72 @@ footer {
 footer a {
   color: var(--accent-color);
 }
+
+.img-ods4 {
+    width: 150px;
+    height: 150px;
+}
+
+footer {
+    background-color: var(--primary-color);
+
+    background-image:
+        linear-gradient(
+            rgba(11, 60, 93, 0.92),
+            rgba(11, 60, 93, 0.92)
+        ),
+        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80');
+
+    background-size: cover;
+    background-position: center;
+
+    color: var(--box-bg);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+
+    padding: 40px 60px;
+    margin-top: 60px;
+
+    border-top: 5px solid var(--accent-color);
+
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+}
+
+footer section {
+    flex: 1;
+}
+
+footer h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
