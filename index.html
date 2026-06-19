@@ -354,5 +354,34 @@
 
 </footer>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+
+          const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+          if (usuarioLogado) {
+
+              const navAcoes = document.querySelector('nav[aria-label="Ações principais"]');
+              
+              if (navAcoes) {
+                  const secaoFacaParte = navAcoes.parentElement;
+                  const paragrafo = secaoFacaParte.querySelector('p');
+
+
+                  paragrafo.innerHTML = `Que bom ter você por aqui, <strong>${usuarioLogado.nome}</strong>! Você já está conectado e pronto para contribuir com a comunidade.`;
+
+
+                  navAcoes.innerHTML = `<a href="#" id="btnSair" style="background-color: #d9534f; color: white;">Sair da Conta</a>`;
+
+                  document.getElementById("btnSair").addEventListener("click", (e) => {
+                      e.preventDefault();
+                      localStorage.removeItem("usuarioLogado"); 
+                      window.location.reload();
+                  });
+              }
+          }
+      });
+    </script>
+
   </body>
 </html>
