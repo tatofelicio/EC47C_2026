@@ -96,3 +96,70 @@ function excluirTodos() {
         renderizarLista();
     }
 }
+function renderizarLista(termoBusca = "", campoBusca = "nome") {
+    const listaUsuarios = document.getElementById("listaUsuarios");
+    listaUsuarios.innerHTML = "";
+
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    if (usuarios.length === 0) {
+        listaUsuarios.innerHTML = "<li>Nenhum usuário cadastrado no sistema.</li>";
+        return;
+    }
+
+    let encontrouAlguem = false;
+
+    usuarios.forEach((usuario, originalIndex) => {
+
+        const valorDoCampo = (usuario[campoBusca] || "").toLowerCase();
+        const busca = termoBusca.toLowerCase();
+
+
+        if (valorDoCampo.includes(busca)) {
+            encontrouAlguem = true;
+            const dataExibicao = usuario.dataEnvio ? usuario.dataEnvio : "Data não registrada";
+
+            const li = document.createElement("li");
+ 
+            li.innerHTML = `
+                <strong>Data:</strong> ${dataExibicao} | 
+                <strong>Nome:</strong> ${usuario.nome} | 
+                <strong>E-mail:</strong> ${usuario.email} | 
+                <strong>Perfil:</strong> ${usuario.perfil}
+                <button onclick="excluirItem(${originalIndex})" style="margin-left: 15px; background-color: #f0ad4e; padding: 5px 10px; font-size: 0.8em; border: none; border-radius: 4px; cursor: pointer;">Excluir</button>
+            `;
+            
+            listaUsuarios.appendChild(li);
+        }
+    });
+
+    if (!encontrouAlguem) {
+        listaUsuarios.innerHTML = "<li>Nenhum usuário encontrado para este critério.</li>";
+    }
+}
+
+
+function pesquisarUsuario() {
+    const termo = document.getElementById("inputPesquisa").value;
+    const campo = document.getElementById("campoPesquisa").value; 
+    renderizarLista(termo, campo);
+}
+
+
+function limparPesquisa() {
+    document.getElementById("inputPesquisa").value = "";
+    document.getElementById("campoPesquisa").value = "nome"; 
+    renderizarLista(); 
+}
+
+function togglePesquisa() {
+    const container = document.getElementById("containerPesquisa");
+    
+
+    if (container.style.display === "none") {
+        container.style.display = "flex";
+    } else {
+        container.style.display = "none";
+        limparPesquisa(); 
+    }
+}

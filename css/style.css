@@ -10,18 +10,15 @@
   --bg-color: #f4f4f9;         /* Light Grey Background */
   --box-bg: #ffffff;           /* White */
 }
-
 body {
   font-family: 'Open Sans', sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
-  /* Image 1: Subtle background pattern */
   background-image: url('https://www.transparenttextures.com/patterns/always-grey.png');
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
-
 h1, h2, h3, legend {
   font-family: 'Roboto', sans-serif;
   color: var(--primary-color);
@@ -31,7 +28,6 @@ h1, h2, h3, legend {
 
 header {
   background-color: var(--primary-color);
-  /* Image 2: Header background */
   background-image: linear-gradient(to right, rgba(11, 60, 93, 0.85), rgba(50, 140, 193, 0.85)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80');
   background-size: cover;
   background-position: center;
@@ -67,15 +63,14 @@ nav ul li a:hover {
 
 
 nav ul li:nth-child(1) a::before {
-  content: "\1F3E0 "; /* House Icon */
+  content: "\1F3E0 "; 
 }
 nav ul li:nth-child(2) a::before {
-  content: "\1F4DD "; /* Memo Icon */
+  content: "\1F4DD "; 
 }
 nav ul li:nth-child(3) a::before {
-  content: "\1F512 "; /* Lock Icon */
+  content: "\1F512 ";
 }
-
 
 main {
   max-width: 900px;
@@ -131,7 +126,7 @@ main ul li {
 }
 
 main ul li::before {
-  content: "\2714 \0020"; /* Checkmark Icon */
+  content: "\2714 \0020";
   color: var(--primary-color);
   font-weight: bold;
 }
@@ -239,9 +234,7 @@ footer {
   color: var(--box-bg);
   text-align: center;
   padding: 30px 20px;
-  margin-top: 50px;
-  /* Image 5: Footer background */
-  background-image: linear-gradient(rgba(11, 60, 93, 0.9), rgba(11, 60, 93, 0.9)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80');
+  margin-top: 50px; background-image: linear-gradient(rgba(11, 60, 93, 0.9), rgba(11, 60, 93, 0.9)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80');
   background-size: cover;
   background-position: center;
 }

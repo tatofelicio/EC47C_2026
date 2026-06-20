@@ -143,13 +143,39 @@
       <section id="lista-container">
         <h2>Usuários Cadastrados</h2>
         
-        <ul id="listaUsuarios"></ul>
-        
-        <div style="margin-top: 20px;">
-          <button id="btnExcluirTodos" onclick="excluirTodos()" style="background-color: #cccccc; color: #1d2731;">
+        <div style="margin-top: 20px; margin-bottom: 20px; display: flex; gap: 15px;">
+          <button id="btnAbrirPesquisa" onclick="togglePesquisa()" style="background-color: #328cc1; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+            Pesquisar Usuários
+          </button>
+
+          <button id="btnExcluirTodos" onclick="excluirTodos()" style="background-color: #cccccc; color: #1d2731; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
             Excluir Todos os Itens
           </button>
         </div>
+
+        <div id="containerPesquisa" style="display: none; margin-bottom: 20px; gap: 10px; align-items: center; background-color: #f4f4f9; padding: 15px; border-radius: 8px; border: 1px solid #ccc;">
+          <select id="campoPesquisa" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+            <option value="nome">Nome</option>
+            <option value="email">E-mail</option>
+            <option value="perfil">Perfil</option>
+          </select>
+          
+          <input 
+            type="text" 
+            id="inputPesquisa" 
+            placeholder="Digite para pesquisar..." 
+            style="padding: 8px; width: 100%; border: 1px solid #ccc; border-radius: 4px;"
+          >
+          
+          <button onclick="pesquisarUsuario()" style="background-color: #328cc1; color: white; padding: 8px 15px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; white-space: nowrap;">
+            Encontrar
+          </button>
+          
+          <button onclick="limparPesquisa()" style="background-color: #cccccc; color: #1d2731; padding: 8px 15px; border: none; border-radius: 4px; cursor: pointer; white-space: nowrap;">
+            Limpar
+          </button>
+        </div>
+        <ul id="listaUsuarios"></ul>
       </section>
 
     </main>
