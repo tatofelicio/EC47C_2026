@@ -96,6 +96,17 @@ function excluirTodos() {
         renderizarLista();
     }
 }
+
+function limparFormulario() {
+    document.getElementById("nome").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("data-nascimento").value = "";
+    document.getElementById("usuario").value = "";
+    document.getElementById("senha").value = "";
+    document.getElementById("confirmar-senha").value = "";
+    document.getElementById("perfil").value = "";
+}
+
 function renderizarLista(termoBusca = "", campoBusca = "nome") {
     const listaUsuarios = document.getElementById("listaUsuarios");
     listaUsuarios.innerHTML = "";
@@ -137,7 +148,6 @@ function renderizarLista(termoBusca = "", campoBusca = "nome") {
         listaUsuarios.innerHTML = "<li>Nenhum usuário encontrado para este critério.</li>";
     }
 }
-
 
 function pesquisarUsuario() {
     const termo = document.getElementById("inputPesquisa").value;
